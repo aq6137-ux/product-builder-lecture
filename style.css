@@ -98,3 +98,64 @@ h1 {
   color: var(--bg-color);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* Affiliate Inquiry Form Styles */
+#affiliate-inquiry {
+  margin-top: 50px;
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  margin-bottom: 50px;
+}
+
+#affiliate-inquiry h2 {
+  text-align: center;
+  color: var(--heading-color);
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.form-group textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+#submit-button {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1em;
+  color: white;
+  background-color: var(--number-bg);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submit-button:hover {
+  background-color: var(--number-hover);
+}
