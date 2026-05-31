@@ -1,3 +1,24 @@
+:root {
+  --bg-color: #f4f7f6;
+  --text-color: #333;
+  --heading-color: #2c3e50;
+  --number-bg: #3498db;
+  --number-hover: #2980b9;
+  --button-bg: #e74c3c;
+  --button-hover: #c0392b;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --button-shadow: rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode {
+  --bg-color: #1a1a1a;
+  --text-color: #f4f7f6;
+  --heading-color: #ecf0f1;
+  --number-bg: #2980b9;
+  --number-hover: #3498db;
+  --shadow-color: rgba(255, 255, 255, 0.1);
+}
+
 body {
   font-family: 'Arial', sans-serif;
   display: flex;
@@ -5,13 +26,14 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #f4f7f6;
-  color: #333;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1 {
-  color: #2c3e50;
+  color: var(--heading-color);
   margin-bottom: 30px;
 }
 
@@ -24,7 +46,7 @@ h1 {
 }
 
 .number {
-  background-color: #3498db;
+  background-color: var(--number-bg);
   color: white;
   border-radius: 50%;
   width: 50px;
@@ -34,32 +56,45 @@ h1 {
   justify-content: center;
   font-size: 1.2em;
   margin: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px var(--shadow-color);
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .number:hover {
   transform: scale(1.1);
-  background-color: #2980b9;
+  background-color: var(--number-hover);
 }
 
 #draw-button {
   padding: 15px 30px;
   font-size: 1.1em;
   color: white;
-  background-color: #e74c3c;
+  background-color: var(--button-bg);
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px var(--button-shadow);
 }
 
 #draw-button:hover {
-  background-color: #c0392b;
+  background-color: var(--button-hover);
   transform: translateY(-2px);
 }
 
 #draw-button:active {
   transform: translateY(1px);
+}
+
+#theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
